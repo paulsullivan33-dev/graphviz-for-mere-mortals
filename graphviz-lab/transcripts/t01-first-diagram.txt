@@ -1,0 +1,12 @@
+# t01-first-diagram.txt
+$ dot -Tsvg first.dot -o rendered/first.svg
+[exit 0]
+$ ls -l rendered/first.svg
+-rw-rw---- 1 root root 3380 Oct 27 03:24 rendered/first.svg
+[exit 0]
+$ grep -o 'viewBox[^ ]* [^ ]* [^ ]* [^"]*' rendered/first.svg | head -1
+viewBox="0.00 0.00 296.00 227.00
+[exit 0]
+$ grep -c '<title>' rendered/first.svg
+9
+[exit 0]

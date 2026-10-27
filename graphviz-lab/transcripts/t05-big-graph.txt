@@ -1,0 +1,11 @@
+# t05-big-graph.txt
+$ dot -Tsvg big.dot -o rendered/big-dot.svg
+[exit 0]
+$ sfdp -Tsvg big.dot -o rendered/big-sfdp.svg
+[exit 0]
+$ grep -c '<title>' rendered/big-dot.svg
+83
+[exit 0]
+$ wc -l big.dot
+46 big.dot
+[exit 0]

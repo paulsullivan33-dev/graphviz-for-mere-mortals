@@ -1,0 +1,16 @@
+# t00-version.txt
+$ dot -V 2>&1
+dot - graphviz version 2.43.0 (0)
+[exit 0]
+$ neato -V 2>&1
+neato - graphviz version 2.43.0 (0)
+[exit 0]
+$ fdp -V 2>&1
+fdp - graphviz version 2.43.0 (0)
+[exit 0]
+$ circo -V 2>&1
+circo - graphviz version 2.43.0 (0)
+[exit 0]
+$ twopi -V 2>&1
+twopi - graphviz version 2.43.0 (0)
+[exit 0]

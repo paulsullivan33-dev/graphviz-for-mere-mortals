@@ -1,0 +1,29 @@
+site_name: Graphviz for Mere Mortals
+site_description: Diagrams from text with the DOT language. Nodes, edges and attributes, the layout engines, clusters, output to SVG, PNG and PDF, and making big graphs stay readable, with the limits stated plainly.
+site_url: https://paulsullivan33-dev.github.io/graphviz-for-mere-mortals/
+copyright: 'Part of <a href="https://paulsullivan33-dev.github.io/mere-mortals/">For Mere Mortals</a> · Text <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, code MIT'
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What Graphviz Is: what-graphviz-is.md
+  - The Moving Parts: the-moving-parts.md
+  - Installing Graphviz: installing-graphviz.md
+  - Your First Diagram: your-first-diagram.md
+  - The DOT Language: the-dot-language.md
+  - Shapes, Colours and Labels: shapes-colours-and-labels.md
+  - Subgraphs and Clusters: subgraphs-and-clusters.md
+  - Layout Engines: layout-engines.md
+  - Big Graphs: big-graphs.md
+  - Output Formats: output-formats.md
+  - Graphviz in Scripts and Pipelines: graphviz-in-scripts.md
+  - Recipes: recipes.md
+  - The Neighbours: the-neighbours.md
+  - Limits: limits.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

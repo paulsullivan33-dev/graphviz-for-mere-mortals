@@ -1,0 +1,18 @@
+// Two clusters: the public desk and the back room of a fictional club.
+digraph Clusters {
+    label="One club, two rooms";
+    subgraph cluster_public {
+        label="Public desk";
+        style=filled; fillcolor="#e0f2fe";
+        Welcome; SignIn [label="Sign-in sheet"];
+        Welcome -> SignIn;
+    }
+    subgraph cluster_back {
+        label="Back room";
+        style=filled; fillcolor="#fef3c7";
+        Sort; Shelve;
+        Sort -> Shelve;
+    }
+    SignIn -> Sort [label="forms in"];
+    Shelve -> Welcome [label="display", style=dashed];
+}

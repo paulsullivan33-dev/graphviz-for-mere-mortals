@@ -1,0 +1,5 @@
+# t04-broken.txt
+$ dot -Tsvg broken.dot -o rendered/broken.svg; echo exit=$?
+exit=1
+Error: broken.dot: syntax error in line 3 near ';'
+[exit 0]

@@ -1,0 +1,21 @@
+# t06-pipeline.txt
+$ python3 pipeline/make_dot.py pipeline/steps.csv > pipeline/generated.dot
+[exit 0]
+$ cat pipeline/generated.dot
+digraph Pipeline {
+    label="Made by a script"; rankdir=LR;
+    Intake;
+    Sort;
+    Intake -> Sort;
+    Test;
+    Sort -> Test [label="checked"];
+    Pack;
+    Test -> Pack [label="pass"];
+    Test -> Sort [label="fail"];
+    Dispatch;
+    Pack -> Dispatch;
+}
+$ dot -Tsvg pipeline/generated.dot -o rendered/pipeline.svg
+[exit 0]
+$ grep -c '<title>' rendered/pipeline.svg
+11

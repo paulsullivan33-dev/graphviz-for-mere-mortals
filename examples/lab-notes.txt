@@ -1,0 +1,43 @@
+Lab notes - Graphviz for Mere Mortals
+======================================
+
+Machine: small Ubuntu 24.04 sandbox.
+Tool: Graphviz 2.43.0, distribution packages.
+All diagrams invented for the lab. Nothing here describes
+a real club, workshop, network or organisation.
+
+What was run
+------------
+- Five engines (dot, neato, fdp, circo, twopi) report the
+  same version line, 2.43.0. Transcript t00.
+- first.dot (a fictional committee) renders to SVG with a
+  viewBox of 296 by 227 points and 9 <title> elements. t01.
+- engines.dot renders under all five engines; every SVG
+  names the same 15 <title> elements. Only geometry moves. t02.
+- workshop.dot renders to SVG (about 5 KB), PNG (1403 x 181
+  pixels, about 39 KB) and PDF (version 1.7). t03.
+- broken.dot fails with exit 1 and the message:
+  Error: broken.dot: syntax error in line 3 near ';'
+  The fault is on line 3 by design: "B -> ;". t04.
+- big.dot (40 nodes, three loops, 46 lines) renders under
+  dot and under sfdp; both SVGs hold 83 <title> elements. t05.
+- pipeline/make_dot.py reads pipeline/steps.csv (5 rows) and
+  prints DOT; the render holds 11 <title> elements, including
+  the Test -> Sort "fail" loop nobody drew by hand. t06.
+- shapes.dot and clusters.dot also render cleanly, 11
+  <title> elements each.
+
+Surprises kept in the text
+---------------------------
+- The recipes chapter originally put a shape attribute on
+  an edge statement. It parsed, and would have taught
+  nonsense; it was caught in review and rewritten before the
+  lab froze its files.
+- SVG being text is the lab's whole verification method:
+  titles counted, viewBox read, no eyes required.
+
+Not run
+-------
+- patchwork and osage: characterised from documentation.
+- Other operating systems and font sets.
+- Graphical editors built on Graphviz by other projects.

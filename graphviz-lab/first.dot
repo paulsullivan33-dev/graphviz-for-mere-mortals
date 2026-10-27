@@ -1,0 +1,13 @@
+// A fictional hobby club, drawn with dot.
+digraph Committee {
+    label="Maple Street Hobby Club - committee";
+    labelloc="t";
+    Chair [shape=box, style=filled, fillcolor="#dbeafe"];
+    Secretary [shape=box];
+    Treasurer [shape=box];
+    Members [shape=ellipse];
+    Chair -> Secretary;
+    Chair -> Treasurer;
+    Secretary -> Members [label="minutes"];
+    Treasurer -> Members [label="dues"];
+}

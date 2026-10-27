@@ -1,0 +1,12 @@
+# t03-formats.txt
+$ dot -Tsvg workshop.dot -o rendered/workshop.svg && dot -Tpng workshop.dot -o rendered/workshop.png && dot -Tpdf workshop.dot -o rendered/workshop.pdf
+[exit 0]
+$ ls -l rendered/workshop.svg rendered/workshop.png rendered/workshop.pdf
+-rw-rw---- 1 root root 10282 Oct 27 03:24 rendered/workshop.pdf
+-rw-rw---- 1 root root 39105 Oct 27 03:24 rendered/workshop.png
+-rw-rw---- 1 root root  5342 Oct 27 03:24 rendered/workshop.svg
+[exit 0]
+$ file rendered/workshop.png rendered/workshop.pdf
+rendered/workshop.png: PNG image data, 1403 x 181, 8-bit/color RGB, non-interlaced
+rendered/workshop.pdf: PDF document, version 1.7
+[exit 0]

@@ -1,0 +1,23 @@
+# t02-all-engines.txt
+$ dot -Tsvg engines.dot -o rendered/engines-dot.svg && echo dot ok
+dot ok
+[exit 0]
+$ neato -Tsvg engines.dot -o rendered/engines-neato.svg && echo neato ok
+neato ok
+[exit 0]
+$ fdp -Tsvg engines.dot -o rendered/engines-fdp.svg && echo fdp ok
+fdp ok
+[exit 0]
+$ circo -Tsvg engines.dot -o rendered/engines-circo.svg && echo circo ok
+circo ok
+[exit 0]
+$ twopi -Tsvg engines.dot -o rendered/engines-twopi.svg && echo twopi ok
+twopi ok
+[exit 0]
+$ ls -l rendered/engines-*.svg
+-rw-rw---- 1 root root 3449 Oct 27 03:24 rendered/engines-circo.svg
+-rw-rw---- 1 root root 3367 Oct 27 03:24 rendered/engines-dot.svg
+-rw-rw---- 1 root root 3443 Oct 27 03:24 rendered/engines-fdp.svg
+-rw-rw---- 1 root root 3454 Oct 27 03:24 rendered/engines-neato.svg
+-rw-rw---- 1 root root 3278 Oct 27 03:24 rendered/engines-twopi.svg
+[exit 0]

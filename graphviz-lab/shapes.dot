@@ -1,0 +1,14 @@
+// Shapes, colours and labels in one small graph.
+digraph Shapes {
+    node [fontname="Helvetica"];
+    idea [shape=box, style="filled,rounded", fillcolor="#fef3c7", label="Idea\n(first line)"];
+    notes [shape=note, fillcolor="#dcfce7", style=filled, label="Notes"];
+    store [shape=cylinder, label="Store"];
+    choice [shape=diamond, color="#b91c1c", label="Worth doing?"];
+    task [shape=ellipse, peripheries=2, label="Task"];
+    idea -> notes;
+    notes -> store;
+    store -> choice;
+    choice -> task [label="yes", fontcolor="#166534"];
+    choice -> idea [label="not yet", style=dashed, color="#6b7280"];
+}

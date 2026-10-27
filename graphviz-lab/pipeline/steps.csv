@@ -1,0 +1,6 @@
+from,to,label
+Intake,Sort,
+Sort,Test,checked
+Test,Pack,pass
+Test,Sort,fail
+Pack,Dispatch,

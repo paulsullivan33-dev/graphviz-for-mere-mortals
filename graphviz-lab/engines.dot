@@ -1,0 +1,6 @@
+// One small network, laid out five ways by five engines.
+graph Engines {
+    A -- B; B -- C; C -- A;
+    C -- D; D -- E; E -- F;
+    F -- D; B -- E;
+}

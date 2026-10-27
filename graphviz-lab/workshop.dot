@@ -1,0 +1,17 @@
+// A made-up workshop workflow.
+digraph Workshop {
+    rankdir=LR;
+    start [shape=circle, label="Start"];
+    receive [label="Receive parts"];
+    inspect [label="Inspect parts"];
+    decide [shape=diamond, label="Pass?"];
+    assemble [label="Assemble"];
+    pack [label="Pack and label"];
+    rework [label="Rework"];
+    done [shape=circle, label="Done"];
+    start -> receive -> inspect -> decide;
+    decide -> assemble [label="yes"];
+    decide -> rework [label="no"];
+    rework -> inspect;
+    assemble -> pack -> done;
+}

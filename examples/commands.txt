@@ -1,0 +1,40 @@
+Graphviz for Mere Mortals - the commands, in chapter order
+==========================================================
+
+Install and check (chapter 3)
+  sudo apt install graphviz
+  dot -V
+  neato -V
+
+First diagram (chapter 4)
+  dot -Tsvg first.dot -o first.svg
+
+Read a render back (chapters 4 and 10)
+  grep -o 'viewBox[^"]*' first.svg | head -1
+  grep -c '<title>' first.svg
+
+Five engines, one file (chapter 8)
+  for e in dot neato fdp circo twopi; do
+      $e -Tsvg engines.dot -o engines-$e.svg
+  done
+
+Three formats, one file (chapter 10)
+  dot -Tsvg workshop.dot -o workshop.svg
+  dot -Tpng workshop.dot -o workshop.png
+  dot -Tpdf workshop.dot -o workshop.pdf
+  file workshop.png workshop.pdf
+
+Big graph, two engines (chapter 9)
+  dot  -Tsvg big.dot -o big-dot.svg
+  sfdp -Tsvg big.dot -o big-sfdp.svg
+
+Syntax check (chapters 5 and 15)
+  dot -Tcanon any.dot -o /dev/null
+  dot -Tsvg broken.dot -o broken.svg    (fails, on purpose)
+
+Pipeline (chapter 11)
+  python3 pipeline/make_dot.py pipeline/steps.csv > pipeline/generated.dot
+  dot -Tsvg pipeline/generated.dot -o rendered/pipeline.svg
+
+Render a whole folder (chapter 11)
+  for f in *.dot; do dot -Tsvg "$f" -o "${f%.dot}.svg"; done

@@ -1,0 +1,13 @@
+digraph Pipeline {
+    label="Made by a script"; rankdir=LR;
+    Intake;
+    Sort;
+    Intake -> Sort;
+    Test;
+    Sort -> Test [label="checked"];
+    Pack;
+    Test -> Pack [label="pass"];
+    Test -> Sort [label="fail"];
+    Dispatch;
+    Pack -> Dispatch;
+}
